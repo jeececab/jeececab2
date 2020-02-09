@@ -1,0 +1,271 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// --------------------------------------------------------------- //
+@import "../styles/colors.scss";
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+html,
+body {
+  color: $white;
+  font-family: "Raleway", sans-serif;
+  background-color: $black;
+}
+
+.hamburger {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: $black;
+  padding: 0 0 8px 15px;
+  border-bottom-left-radius: 100%;
+  transition: ease-in-out 0.250s;
+
+  div {
+    height: 4px;
+    background-color: $white;
+    margin: 7px 0 7px auto;
+    transition: transform ease-in-out 0.250s;
+  }
+
+  div:nth-child(1) {
+    width: 40px;
+  }
+
+  div:nth-child(2) {
+    width: 30px;
+  }
+
+  div:nth-child(3) {
+    width: 20px;
+  }
+
+  &:hover {
+    div {
+      background-color: darken($white, 10%);
+    }
+  }
+
+  &.displayed {
+    right: 300px;
+    div:nth-child(1) {
+      width: 40px;
+      transform: translate(-5px, 13px) rotate(45deg);
+    }
+  
+    div:nth-child(2) {
+      width: 30px;
+      transform: translate(-5px, -2px) rotate(-45deg);
+    }
+  
+    div:nth-child(3) {
+      opacity: 0;
+    }
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  background-color: $black;
+  color: $white;
+  transition: ease-in-out 0.250s;
+
+  &.displayed {
+    right: 0;
+  }
+
+  li {
+    text-align: center;
+    padding: 0.875em;
+    border-bottom: 1px solid rgb(85, 85, 85);
+    &:last-child {
+      border: none;
+    }
+  }
+
+  a {
+    font-size: 1.25em;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0.5em 0;
+  max-width: 15em;
+
+  &:last-child {
+    max-width: 10em;
+  }
+}
+
+.hero {
+  background-image: url("../../static/bground-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5em;
+}
+
+.hero__subtitles {
+  margin: 1em 15px;
+}
+
+.hero__bio {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: $black;
+  font-size: 1.15rem;
+  padding: 1em;
+  width: 80%;
+  max-width: 600px;
+  margin: 3em 0;
+}
+
+.icons {
+  svg {
+    color: rgb(25, 187, 125);
+    height: 3em;
+    width: 3em;
+  }
+}
