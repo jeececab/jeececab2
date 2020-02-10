@@ -140,95 +140,30 @@ body {
   background-color: $black;
 }
 
-.hamburger {
-  cursor: pointer;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: $black;
-  padding: 0 0 8px 15px;
-  border-bottom-left-radius: 100%;
-  transition: ease-in-out 0.250s;
-
-  div {
-    height: 4px;
-    background-color: $white;
-    margin: 7px 0 7px auto;
-    transition: transform ease-in-out 0.250s;
-  }
-
-  div:nth-child(1) {
-    width: 40px;
-  }
-
-  div:nth-child(2) {
-    width: 30px;
-  }
-
-  div:nth-child(3) {
-    width: 20px;
-  }
-
-  &:hover {
-    div {
-      background-color: darken($white, 10%);
-    }
-  }
-
-  &.displayed {
-    right: 300px;
-    div:nth-child(1) {
-      width: 40px;
-      transform: translate(-5px, 13px) rotate(45deg);
-    }
-  
-    div:nth-child(2) {
-      width: 30px;
-      transform: translate(-5px, -2px) rotate(-45deg);
-    }
-  
-    div:nth-child(3) {
-      opacity: 0;
-    }
-  }
+body {
+  background-image: url("../../static/bground-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  width: 300px;
-  background-color: $black;
-  color: $white;
-  transition: ease-in-out 0.250s;
-
-  &.displayed {
-    right: 0;
-  }
-
-  li {
-    text-align: center;
-    padding: 0.875em;
-    border-bottom: 1px solid rgb(85, 85, 85);
-    &:last-child {
-      border: none;
-    }
-  }
-
-  a {
-    font-size: 1.25em;
-    color: $white;
-    text-decoration: none;
-  }
+p {
+  line-height: 1.3;
 }
 
 h1 {
+  color: #00bb92;
   font-size: 4rem;
   font-weight: bold;
   margin-left: 15px;
+  @media (min-width: 900px) {
+    font-size: 5.5rem;
+  }
 }
 
 h2 {
+  color: $lightgrey;
   font-size: 1.5rem;
   margin: 0.5em 0;
   max-width: 15em;
@@ -236,16 +171,15 @@ h2 {
   &:last-child {
     max-width: 10em;
   }
+
+  @media (min-width: 900px) {
+    font-size: 2rem;
+    max-width: 30em;
+  }
 }
 
 .hero {
-  background-image: url("../../static/bground-img.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  padding-top: 5em;
+  padding-top: 2em;
 }
 
 .hero__subtitles {
@@ -260,12 +194,4 @@ h2 {
   width: 80%;
   max-width: 600px;
   margin: 3em 0;
-}
-
-.icons {
-  svg {
-    color: rgb(25, 187, 125);
-    height: 3em;
-    width: 3em;
-  }
 }
