@@ -3,8 +3,8 @@ import Layout from "../components/layout"
 
 const Blog = () => {
   return (
-    <Layout lang="en" location="blog">
-      <h1>Read stuff</h1>
+    <Layout lang="fr" location="blog">
+      <h1>Lire des choses</h1>
     </Layout>
   )
 }

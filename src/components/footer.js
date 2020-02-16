@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import styles from "./footer.module.scss"
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa"
 
-const Footer = () => {
+const Footer = ({ lang }) => {
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
@@ -34,7 +34,9 @@ const Footer = () => {
           <FaInstagram />
         </a>
       </div>
-      <p className={styles.p}>Created by Jeececab, © 2020</p>
+      <p className={styles.p}>
+        {lang === "fr" ? "Créé par Jeececab" : "Created by Jeececab"}, © 2020
+      </p>
     </footer>
   )
 }

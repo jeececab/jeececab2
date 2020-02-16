@@ -4,17 +4,17 @@ import Footer from "./footer"
 import "../styles/index.scss"
 import styles from "./layout.module.scss"
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, lang }) => {
   return (
     <>
-      <Header />
+      <Header lang={lang} location={location} />
       <div
         className={`${styles.container} ${
-          location && location === "index" ? styles.container_hp : ""
+          location && location === "/" ? styles.container_hp : ""
         }`}
       >
         <div className={styles.content}>{children}</div>
-        <Footer />
+        <Footer lang={lang} />
       </div>
     </>
   )

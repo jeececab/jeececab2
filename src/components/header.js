@@ -2,8 +2,13 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styles from "./header.module.scss"
 
-const Header = () => {
+const Header = ({ lang, location }) => {
   const [displayMenu, toggleDisplayMenu] = useState(false)
+
+  const buildUrl = target => {
+    const prefix = lang === "fr" ? "fr" : ""
+    return prefix + "/" + target
+  }
 
   return (
     <>
@@ -21,28 +26,30 @@ const Header = () => {
       <nav className={`${styles.nav} ${displayMenu ? styles.displayed : ""}`}>
         <ul>
           <li>
-            <Link to="/" activeClassName={styles.active}>
-              Home
+            <Link to={buildUrl("")} activeClassName={styles.active}>
+              {lang === "fr" ? "Accueil" : "Home"}
             </Link>
           </li>
           <li>
-            <Link to="/skills" activeClassName={styles.active}>
-              Skills
+            <Link to={buildUrl("skills")} activeClassName={styles.active}>
+              {lang === "fr" ? "Habiletés" : "Skills"}
             </Link>
           </li>
           <li>
-            <Link to="/blog" activeClassName={styles.active}>
-              Read stuff
+            <Link to={buildUrl("blog")} activeClassName={styles.active}>
+              {lang === "fr" ? "Lire de choses" : "Read stuff"}
             </Link>
           </li>
           <li>
-            <Link to="/contact" activeClassName={styles.active}>
-              Contact me
+            <Link to={buildUrl("contact")} activeClassName={styles.active}>
+              {lang === "fr" ? "Me contacter" : "Contact me"}
             </Link>
           </li>
           <li>
-            <Link to="/lang">
-              Switch FR
+            <Link
+              to={lang === "fr" ? location.replace("fr", "") : "fr/" + location}
+            >
+              {lang === "fr" ? "English" : "Français"}
             </Link>
           </li>
         </ul>
