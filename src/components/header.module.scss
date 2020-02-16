@@ -12,7 +12,7 @@
 
   div {
     height: 4px;
-    background-color: $lightgrey;
+    background-color: $midlightgrey;
     margin: 7px 0 7px auto;
     transition: transform ease-in-out 0.25s;
   }
@@ -88,7 +88,7 @@
     &:hover,
     &.active {
       color: $white;
-      background: lighten($black, 5%);
+      background: lighten($black, 7%);
     }
   }
 }

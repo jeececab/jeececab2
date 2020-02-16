@@ -1,10 +1,16 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styles from "./footer.module.scss"
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa"
 
 const Footer = () => {
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    setLoaded(true)
+  }, [loaded])
+
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${loaded ? styles.displayed : ""}`}>
       <div className={styles.icons}>
         <a
           href="https://github.com/jeececab/"

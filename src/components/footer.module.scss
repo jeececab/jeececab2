@@ -2,13 +2,21 @@
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity ease-in-out 1.5s;
 
   p {
     color: $lightgrey;
+    margin: 0.5em 0;
   }
+}
+
+.displayed {
+  opacity: 1;
 }
 
 .icons {
@@ -17,7 +25,7 @@
     color: #00bb92;
     height: 40px;
     width: 40px;
-    margin: 0 0.75em 0.25em 0;
+    margin: 0 0.75em 0 0;
 
     &:hover {
       color: darken(#00bb92, 7%);
