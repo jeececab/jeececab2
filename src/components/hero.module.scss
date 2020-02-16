@@ -5,8 +5,6 @@
   font-size: 4rem;
   font-weight: bold;
   margin-left: 15px;
-  opacity: 0;
-  transition: opacity ease-in-out 0.25s;
 
   @media (min-width: 600px) {
     margin-left: 0px;
@@ -19,8 +17,6 @@
 
 .hero__subtitles {
   margin: 1em 15px;
-  opacity: 0;
-  transition: opacity ease-in-out 0.5s;
 
   @media (min-width: 600px) {
     margin-left: 0px;
@@ -34,7 +30,7 @@
   max-width: 15em;
 
   &:last-child {
-    max-width: 11em;
+    max-width: 11.5em;
   }
 
   @media (min-width: 900px) {
@@ -53,8 +49,8 @@
   margin: 3em 0;
   opacity: 0;
   transition: opacity ease-in-out 0.75s;
-}
 
-.displayed {
-  opacity: 1;
+  @media (min-width: 800px) {
+    font-size: 1.125rem;
+  }
 }

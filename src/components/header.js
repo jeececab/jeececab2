@@ -1,19 +1,24 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import Link from "gatsby-link"
 import styles from "./header.module.scss"
 
 const Header = ({ lang, location }) => {
   const [displayMenu, toggleDisplayMenu] = useState(false)
 
   const buildUrl = target => {
-    const prefix = lang === "fr" ? "fr" : ""
+    const prefix = lang === "/fr" ? "/fr" : ""
     return prefix + "/" + target
+  }
+
+  const handleKeyDown = e => {
+    e.keyCode === 77 && toggleDisplayMenu(!displayMenu)
   }
 
   return (
     <>
       <div
         onClick={() => toggleDisplayMenu(!displayMenu)}
+        onKeyDown={handleKeyDown}
         className={`${styles.hamburger} ${displayMenu ? styles.displayed : ""}`}
         role="menu"
         tabIndex={0}
@@ -47,7 +52,9 @@ const Header = ({ lang, location }) => {
           </li>
           <li>
             <Link
-              to={lang === "fr" ? location.replace("fr", "") : "fr/" + location}
+              to={`/${
+                lang === "fr" ? location.replace("fr", "") : "fr/" + location
+              }`}
             >
               {lang === "fr" ? "English" : "Français"}
             </Link>
