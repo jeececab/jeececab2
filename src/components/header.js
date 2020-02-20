@@ -6,7 +6,7 @@ const Header = ({ lang, location }) => {
   const [displayMenu, toggleDisplayMenu] = useState(false)
 
   const buildUrl = target => {
-    const prefix = lang === "/fr" ? "/fr" : ""
+    const prefix = lang === "fr" ? "/fr" : ""
     return prefix + "/" + target
   }
 
@@ -51,11 +51,7 @@ const Header = ({ lang, location }) => {
             </Link>
           </li>
           <li>
-            <Link
-              to={`/${
-                lang === "fr" ? location.replace("fr", "") : "fr/" + location
-              }`}
-            >
+            <Link to={`${lang === "fr" ? "/" + location : "/fr/" + location}`}>
               {lang === "fr" ? "English" : "Français"}
             </Link>
           </li>

@@ -5,7 +5,7 @@ import "../styles/index.scss"
 
 const Homepage = () => {
   return (
-    <Layout lang="fr" location="/">
+    <Layout lang="fr" location="">
       <Hero lang="fr" />
     </Layout>
   )
