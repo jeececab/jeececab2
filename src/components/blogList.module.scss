@@ -1,0 +1,7 @@
+.subtitle {
+  margin-left: 15px;
+
+  @media (min-width: 600px) {
+    margin-left: 0px;
+  }
+}
