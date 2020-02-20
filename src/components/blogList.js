@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import styles from "./blogList.module.scss"
 
 const BlogList = ({ lang }) => {
   const [loaded, setLoaded] = useState(false)
@@ -10,7 +9,7 @@ const BlogList = ({ lang }) => {
 
   return (
     <>
-      <h2 className={`${styles.subtitle} ${loaded ? "displayed" : ""}`}>
+      <h2 className={loaded ? "displayed" : ""}>
         {lang === "fr" ? "Bientôt..." : "Coming soon..."}
       </h2>
     </>

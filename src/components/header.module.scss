@@ -6,14 +6,14 @@
   top: 0;
   right: 0;
   background: $black;
-  padding: 0 0 8px 15px;
+  padding: 2px 0 8px 15px;
   border-bottom-left-radius: 100%;
   transition: ease-in-out 0.25s;
 
   div {
     height: 4px;
     background-color: $midlightgrey;
-    margin: 7px 0 7px auto;
+    margin: 7px 10px 7px auto;
     transition: transform ease-in-out 0.25s;
   }
 
@@ -38,7 +38,7 @@
   &.displayed {
     right: 300px;
     div:nth-child(1) {
-      transform: translate(-5px, 13px) rotate(45deg);
+      transform: translate(3px, 12px) rotate(45deg);
     }
 
     div:nth-child(2) {
@@ -46,7 +46,7 @@
     }
 
     div:nth-child(3) {
-      transform: translate(-15px, -9px) rotate(-45deg);
+      transform: translate(-8px, -11px) rotate(-45deg);
     }
   }
 
