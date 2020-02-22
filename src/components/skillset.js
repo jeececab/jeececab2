@@ -8,6 +8,9 @@ import {
   FaVuejs,
   FaNodeJs,
   FaAws,
+  FaSass,
+  FaGitAlt,
+  FaGoogle,
 } from "react-icons/fa"
 import { DiMongodb } from "react-icons/di"
 
@@ -34,12 +37,13 @@ const Skillset = ({ lang }) => {
             code souvent en mode « vanilla », car j'apprécie le challenge de
             trouver une solution du début. Ça m'aide à mieux comprendre les
             librairies, et je dépends moins d'elles. Cela dit, au travail, nous
-            utilisons beaucoup <span className={styles.bold}>ReactJS</span>
+            utilisons beaucoup <span className={styles.bold}>ReactJS </span>
             pour l'efficacité et également
             <span className={styles.bold}> VueJS</span>. Ce site Web a été fait
             avec<span className={styles.bold}> Gatsby</span>, car j'étais
-            curieux d'expérimenter avec.
-            <br />
+            curieux d'expérimenter avec. Par ailleurs, j'ai développé une bonne
+            expertise en tests automatisés et comment mettre en place un bon
+            flow de CI/CD.
           </p>
         ) : (
           <p>
@@ -47,21 +51,23 @@ const Skillset = ({ lang }) => {
             <span className={styles.bold}>HTML, CSS, Javascript</span>) and I
             often code in "vanilla" mode, because I enjoy the challenge of
             figuring out solutions from scratch. It helps me better understand
-            what some librairies do, and I depend less on them. That being said,
-            at work, we use <span className={styles.bold}>ReactJS</span> a lot
-            for effeciency and also <span className={styles.bold}>VueJS</span>.
-            This Website was made using{" "}
-            <span className={styles.bold}>Gatsby</span>, because I was curious
-            to experiment with it.
-            <br />
+            what librairies do, and I depend less on them. That being said, at
+            work, we use <span className={styles.bold}>ReactJS</span> a lot for
+            effeciency and also <span className={styles.bold}>VueJS</span>. This
+            Website was made using <span className={styles.bold}>Gatsby</span>,
+            because I was curious to experiment with it. Otherwise, I developed
+            a good expertise in automated testing and how to put a good CI/CD
+            flow into place.
           </p>
         )}
         <div className={styles.icons}>
           <FaJs />
           <FaHtml5 />
           <FaCss3 />
+          <FaSass />
           <FaReact />
           <FaVuejs />
+          <FaGitAlt />
         </div>
       </div>
 
@@ -77,17 +83,18 @@ const Skillset = ({ lang }) => {
             dès que j'ai l'opportunité au travail, je tente de me faire assigner
             des tâches qui tombent plus dans l'univers back-end, étant donné que
             je suis de plus en plus comfortable avec la partie front-end. J'ai
-            été impliqué dans la mise en place de solutions serversless
+            été impliqué dans la mise en place de solutions serverless
             (endpoints
             <span className={styles.bold}> MongoDB</span> Stitch et fonctions
-            serverless). J'utilise aussi
-            <span className={styles.bold}> NodeJS</span> de plus en plus. ET
-            finalement, j'ai configuré et déployé quelques unes de nos Apps via
+            serverless). J'ai configuré et déployé quelques unes de nos Apps via
             le service
             <span className={styles.bold}> AWS Amplify</span>, incluant un flow
             de déploiement continu complet (avec Cypress pour les tests
-            automatisés).
-            <br />
+            automatisés). J'ai également travaillé avec
+            <span className={styles.bold}> Google Firebase </span>comme solution
+            de base de données et authentification. Et finalement, j'utilise
+            aussi
+            <span className={styles.bold}> NodeJS</span> à l'occasion.
           </p>
         ) : (
           <p>
@@ -98,18 +105,21 @@ const Skillset = ({ lang }) => {
             comfortable on the front-end side of things. I was involved on a few
             serverless solutions setup (
             <span className={styles.bold}>MongoDB</span> Stitch endpoints and
-            serverless functions). I also use
-            <span className={styles.bold}> NodeJS</span> more and more. And
-            finally, I configured and deployed a few of our app via the
+            serverless functions). I configured and deployed a few of our app
+            via the
             <span className={styles.bold}> AWS Amplify service</span>, including
-            the continuous deployment pipeline (with Cypress automated tests).
-            <br />
+            the continuous deployment pipeline (with Cypress automated tests). I
+            worked with<span className={styles.bold}> Google Firebase </span>to
+            set up databases and authentication. Finally, I also occasionally
+            use
+            <span className={styles.bold}> NodeJS</span>.
           </p>
         )}
         <div className={styles.icons}>
           <FaNodeJs />
           <DiMongodb />
           <FaAws />
+          <FaGoogle />
         </div>
       </div>
     </>

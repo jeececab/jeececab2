@@ -20,7 +20,7 @@ const Header = ({ lang, location }) => {
         onClick={() => toggleDisplayMenu(!displayMenu)}
         onKeyDown={handleKeyDown}
         className={`${styles.hamburger} ${displayMenu ? styles.displayed : ""}`}
-        role="menu"
+        role="button"
         aria-label="Open the menu"
         tabIndex={0}
       >
