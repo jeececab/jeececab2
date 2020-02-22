@@ -15,7 +15,7 @@ const Header = ({ lang, location }) => {
   }
 
   return (
-    <>
+    <header>
       <div
         onClick={() => toggleDisplayMenu(!displayMenu)}
         onKeyDown={handleKeyDown}
@@ -58,7 +58,7 @@ const Header = ({ lang, location }) => {
           </li>
         </ul>
       </nav>
-    </>
+    </header>
   )
 }
 

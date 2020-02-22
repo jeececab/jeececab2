@@ -9,6 +9,7 @@
   padding: 2px 0 8px 15px;
   border-bottom-left-radius: 100%;
   transition: ease-in-out 0.25s;
+  z-index: 3;
 
   div {
     height: 4px;
@@ -63,6 +64,7 @@
   transition: ease-in-out 0.25s;
   border-bottom: 1px solid $darkgrey;
   border-left: 1px solid $darkgrey;
+  z-index: 3;
 
   &.displayed {
     right: 0;

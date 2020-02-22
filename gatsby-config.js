@@ -1,20 +1,19 @@
 module.exports = {
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
+        path: `${__dirname}/src/images/`,
       },
     },
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-plugin-i18n",
+      resolve: `gatsby-plugin-i18n`,
       options: {
-        langKeyDefault: "en",
+        langKeyDefault: `en`,
         useLangKeyLayout: false,
       },
     },
