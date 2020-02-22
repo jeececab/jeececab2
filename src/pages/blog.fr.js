@@ -13,7 +13,6 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <meta
           name="description"
           content="Blog de Jean-Christophe Séguin Cabana (aka Jeececab), développeur Front-end basé à Montréal. Javascript, HTML, CSS, React, VueJs, NodeJs, MongoDB."

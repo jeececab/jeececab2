@@ -8,7 +8,6 @@ const Homepage = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <meta
           name="description"
           content="Site Web personnel de Jean-Christophe Séguin Cabana (aka Jeececab), développeur front-end basé à Montréal. Javascript, HTML, CSS, React, VueJs, NodeJs, MongoDB."

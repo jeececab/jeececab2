@@ -13,7 +13,6 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <meta
           name="description"
           content="Contacter Jean-Christophe Séguin Cabana (aka Jeececab), développeur Front-end basé à Montréal. Javascript, HTML, CSS, React, VueJs, NodeJs, MongoDB."
