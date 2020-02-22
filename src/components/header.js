@@ -21,11 +21,12 @@ const Header = ({ lang, location }) => {
         onKeyDown={handleKeyDown}
         className={`${styles.hamburger} ${displayMenu ? styles.displayed : ""}`}
         role="menu"
+        aria-label="Open the menu"
         tabIndex={0}
       >
-        <div></div>
-        <div></div>
-        <div></div>
+        <div aria-hidden="true"></div>
+        <div aria-hidden="true"></div>
+        <div aria-hidden="true"></div>
       </div>
 
       <nav className={`${styles.nav} ${displayMenu ? styles.displayed : ""}`}>

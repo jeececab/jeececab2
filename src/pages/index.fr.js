@@ -15,6 +15,8 @@ const Homepage = () => {
         />
         <title>Jeececab - Développeur Front-end de Montréal</title>
         <link rel="canonical" href="https://www.jeececab.com/fr" />
+        <link rel="alternate" href="https://www.jeececab.com" hreflang="en" />
+        <html lang="fr" />
       </Helmet>
       <Layout lang="fr" location="">
         <Hero lang="fr" />

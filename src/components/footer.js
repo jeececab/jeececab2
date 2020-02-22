@@ -17,21 +17,30 @@ const Footer = ({ lang }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub />
+          <FaGithub aria-hidden="true" />
+          <span className="visible-hidden">
+            {lang === "fr" ? "Mon" : "My"} Github
+          </span>
         </a>
         <a
           href="https://twitter.com/jcsegcab"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTwitter />
+          <FaTwitter aria-hidden="true" />
+          <span className="visible-hidden">
+            {lang === "fr" ? "" : "My"} Twitter
+          </span>
         </a>
         <a
           href="https://www.instagram.com/jeececab/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaInstagram />
+          <FaInstagram aria-hidden="true" />
+          <span className="visible-hidden">
+            {lang === "fr" ? "" : "My"} Instagram
+          </span>
         </a>
       </div>
       <p className={styles.p}>
