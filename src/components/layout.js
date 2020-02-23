@@ -12,7 +12,7 @@ const Layout = ({ children, location, lang }) => {
       image: file(relativePath: { eq: "bground-img.jpg" }) {
         id
         childImageSharp {
-          fluid {
+          fluid(quality: 95) {
             ...GatsbyImageSharpFluid
           }
         }
