@@ -1,20 +1,6 @@
 @import "../styles/reset.scss";
 @import "../styles/colors.scss";
 
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Regular.ttf");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Medium.ttf");
-  font-weight: 500;
-  font-display: swap;
-}
-
 html,
 body {
   color: $white;

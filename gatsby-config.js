@@ -17,5 +17,16 @@ module.exports = {
         useLangKeyLayout: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Raleway`,
+            variants: [`400`, `500`]
+          },
+        ],
+      },
+    }
   ],
 }
