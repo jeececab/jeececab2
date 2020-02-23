@@ -12,7 +12,7 @@ const Layout = ({ children, location, lang }) => {
       image: file(relativePath: { eq: "bground-img.jpg" }) {
         id
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -25,6 +25,7 @@ const Layout = ({ children, location, lang }) => {
       <Header lang={lang} location={location} />
       <Img
         fluid={data.image.childImageSharp.fluid}
+        loading="auto"
         style={{
           position: "absolute",
           left: 0,
