@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Header from "./header"
@@ -7,6 +7,16 @@ import "../styles/index.scss"
 import styles from "./layout.module.scss"
 
 const Layout = ({ children, location, lang }) => {
+  useEffect(() => {
+    const appHeight = () =>
+      document.documentElement.style.setProperty(
+        "--app-height",
+        `${window.innerHeight}px`
+      )
+    window.addEventListener("resize", appHeight)
+    appHeight()
+  }, [])
+
   const data = useStaticQuery(graphql`
     query Images {
       image: file(relativePath: { eq: "bground-img.jpg" }) {
@@ -33,7 +43,7 @@ const Layout = ({ children, location, lang }) => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          zIndex: 1
+          zIndex: 1,
         }}
       />
       <div className={styles.container}>
