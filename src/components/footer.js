@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styles from "./footer.module.scss"
-import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa"
+import { FaGithub, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 const Footer = ({ lang }) => {
   const [loaded, setLoaded] = useState(false)
@@ -40,6 +40,12 @@ const Footer = ({ lang }) => {
           <FaInstagram aria-hidden="true" />
           <span className="visible-hidden">
             {lang === "fr" ? "" : "My"} Instagram
+          </span>
+        </a>
+        <a>
+          <FaLinkedin aria-hiden="true" />
+          <span className="visible-hidden">
+            {lang === "fr" ? "" : "My"} Linked-in
           </span>
         </a>
       </div>
